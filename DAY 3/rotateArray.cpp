@@ -21,7 +21,8 @@ void printArray(int arr[], int n){
 
 void rotate(int k, int arr[], int n){
     k = k % n;
-    if(k < 0) k += n;
+    if(k < 0) 
+        k += n;
 
     // cout << "after reversing whole array: ";
     revArray(0, n-1, arr);
@@ -39,7 +40,7 @@ void rotate(int k, int arr[], int n){
 int main(){
     int Array[] = {5, 7, 8, 3, 4};
     int n = 5;
-    int k = 1;
+    int k = 3;
 
     cout << "original array: ";
     printArray(Array, n);
