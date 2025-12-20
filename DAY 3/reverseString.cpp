@@ -3,21 +3,31 @@
 
 using namespace std;
 
+string reverseString(string s){
+        for(int i = 0; i < s.size()/2; i++){
+        int temp = s[i];
+        s[i] = s[s.size()-i-1];
+        s[s.size()-i-1] = temp;
+    }
+    return s;
+}
+
 int main(){
     string s;
+    string answer;
     cout << " enter a string: ";
     cin >> s;
-    int n = s.size();
 
-    for(int i = 0; i < n/2; i++){
-        int temp = s[i];
-        s[i] = s[n-i-1];
-        s[n-i-1] = temp;
+    int times;
+
+    cout << "enter a number: ";
+    cin >> times;
+
+    for(int i = 0; i < times; i++){
+        answer = reverseString(s);
     }
 
-    cout << endl << "reversed array: ";
+    cout<<answer;
 
-    cout<<s;
-    
     return 0;
 }
